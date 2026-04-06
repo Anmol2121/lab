@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - AI Lab{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <nav class="dashboard-nav">
+        <div class="logo">🤖 AI Lab</div>
+        <div class="user-menu">
+            <span>👋 {{ user.username }}</span>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </div>
+    </nav>
+    
+    <div class="dashboard-content">
+        <h2>Welcome to your AI Learning Hub</h2>
+        <p>Practice and master Artificial Intelligence concepts through interactive labs.</p>
+        
+        <div class="lab-cards">
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3>Neural Networks</h3>
+                <p>Build and train your first neural network from scratch.</p>
+                <button class="btn-secondary">Start Lab →</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Data Science</h3>
+                <p>Learn data preprocessing, visualization, and analysis.</p>
+                <button class="btn-secondary">Start Lab →</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <h3>LLM Fine-tuning</h3>
+                <p>Hands-on with large language models and prompt engineering.</p>
+                <button class="btn-secondary">Start Lab →</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
